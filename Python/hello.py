@@ -1,1 +1,1 @@
-print "Selamun aleykum"
+print "buraya mı yazıyoruz"
