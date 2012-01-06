@@ -1,1 +1,1 @@
-print "buraya mı yazıyoruz"
+print "buraya mı yazıyoruxxxz"
