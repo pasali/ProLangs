@@ -1,0 +1,46 @@
+#!/bin/bash
+
+case "$1" in
+   "-s") 
+    
+        echo "Downloads dizinindeki 'srt' ve 'sub' uzantılı dosyalar silenecek?(e/h)"
+        read secim
+        if [ "$secim"==[eE] ]
+        then
+            rm -rf $HOME/Downloads/*.srt && rm -rf $HOME/Downloads/*.sub
+        fi
+    exit 1
+    ;;
+    "-t")
+     
+        echo "Downloads dizinindeki 'torrent' uzantılı dosyalar silenecek?(e/h)"
+        read secim
+        if [ "$secim"==[eE] ]
+        then
+            rm -rf $HOME/Downloads/*.torrent
+        fi
+    exit 1
+    ;;
+    "-a")
+         
+        echo "Downloads dizinindeki tüm  dosyalar silenecek?(e/h)"
+        read secim
+        if [ "$secim"==[eE] ]
+        then
+            rm -rf $HOME/Downloads/*
+        fi
+        ;;
+    "-n")
+        
+        echo "Dosya adını girin: "
+        read dosya
+        path=$(find Downloads/ -type f -name $dosya)
+        echo "Silinsin mi?(e/h)"
+        read secim
+        if [ "$secim"==[eE] ]
+        then
+            rm -rf "$path"
+        fi
+        ;;
+
+esac
