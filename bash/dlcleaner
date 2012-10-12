@@ -42,5 +42,16 @@ case "$1" in
             rm -rf "$path"
         fi
         ;;
+     "-e")
+        
+        echo "$2 uzantılı dosyalar silinecek?(e/h)"
+        read secim
+        if [ "$secim"==[eE] ]
+        then
+            rm -rf Downloads/*."$2"
+        fi
+        ;;
 
+        
+        
 esac
