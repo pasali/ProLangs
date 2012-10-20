@@ -32,9 +32,8 @@ case "$1" in
         ;;
     "-n")
         
-        echo "Dosya adını girin: "
-        read dosya
-        path=$(find Downloads/ -type f -name $dosya)
+        path=$(find Downloads/ -type f -name $2)
+        echo $path
         echo "Silinsin mi?(e/h)"
         read secim
         if [ "$secim"==[eE] ]
@@ -52,6 +51,4 @@ case "$1" in
         fi
         ;;
 
-        
-        
 esac
