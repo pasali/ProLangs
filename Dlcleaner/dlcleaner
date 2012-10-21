@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# pasali / 12.10.2012
+
+
 case "$1" in
    "-s") 
     
